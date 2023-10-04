@@ -12,7 +12,7 @@ const Navigation = () => {
     <>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <CrwnLogo className="logo" />
+          <img src="https://play-lh.googleusercontent.com/DHKCIsjLICg_9iHItemN9SOmgBHEVDO62-8vvveDkKop4Zz-1XeygUEE0at4PA387bY=w480-h960-rw" />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
