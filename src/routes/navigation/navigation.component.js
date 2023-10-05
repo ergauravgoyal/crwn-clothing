@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './navigation.styles.scss';
-import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import { UserContext } from '../../contexts/user.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
@@ -12,8 +12,11 @@ const Navigation = () => {
     <>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <img src="https://play-lh.googleusercontent.com/DHKCIsjLICg_9iHItemN9SOmgBHEVDO62-8vvveDkKop4Zz-1XeygUEE0at4PA387bY=w480-h960-rw" />
+          <img src="https://stackblitz-starters-kxhgru.stackblitz.io/assets/crown.svg" />
         </Link>
+        {/* <Link className="logo-container" to="/">
+          <CrwnLogo className="logo" />
+        </Link> */}
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
             SHOP
@@ -27,6 +30,7 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
       </div>
       <Outlet />
